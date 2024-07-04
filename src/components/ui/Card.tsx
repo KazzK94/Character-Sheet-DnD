@@ -6,7 +6,7 @@ interface GenericComponentProps {
 
 export function Card({ children, className = '' }: GenericComponentProps) {
 	return (
-		<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+		<div className={`rounded-lg border shadow-sm bg-primary ${className}`}>
 			{children}
 		</div>
 	)

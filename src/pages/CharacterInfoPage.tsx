@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardSubtitle, CardContent } from '../compo
 export default function CharacterInfoPage() {
 	return (
 		<div className='mt-3'>
-			<Card className='mx-4 bg-blue-950'>
+			<Card className='mx-4'>
 				<CardHeader>
 					<CardTitle>Hikari Tsuki</CardTitle>
 					<CardSubtitle>Información del Personaje</CardSubtitle>
@@ -20,7 +20,7 @@ export default function CharacterInfoPage() {
 				</CardContent>
 			</Card>
 
-			<Card className='mx-4 mt-4 mb-4 bg-blue-950'>
+			<Card className='mx-4 mt-4 mb-4'>
 				<CardHeader>
 					<CardTitle>Hikari Tsuki</CardTitle>
 					<CardSubtitle>Trasfondo</CardSubtitle>
@@ -41,7 +41,7 @@ export default function CharacterInfoPage() {
 				</CardContent>
 			</Card>
 
-			<Card className='mx-4 mt-4 mb-4 bg-blue-950'>
+			<Card className='mx-4 mt-4 mb-4'>
 				<CardHeader>
 					<CardTitle>Hikari Tsuki</CardTitle>
 					<CardSubtitle>Rasgos y Características</CardSubtitle>
@@ -51,7 +51,7 @@ export default function CharacterInfoPage() {
 				</CardContent>
 			</Card>
 
-			<Card className='mx-4 mt-4 mb-4 bg-blue-950'>
+			<Card className='mx-4 mt-4 mb-4'>
 				<CardHeader>
 					<CardTitle>Hikari Tsuki</CardTitle>
 					<CardSubtitle>Competencias</CardSubtitle>
