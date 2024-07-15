@@ -27,7 +27,7 @@ export default function App() {
 	const CurrentPageComponent = Pages[page as PageKey]
 
 	return (
-		<div className='h-svh bg-black flex flex-col-reverse md:flex-col'>
+		<div className='h-full bg-black flex flex-col-reverse md:flex-col'>
 			<Navbar currentPage={page} onPageChange={setPage} />
 			{/** HEADER HERE (with current page name) */}
 			<main className='flex-1 overflow-y-auto scrollbar-thumb-green-700'>
