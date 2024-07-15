@@ -3,7 +3,6 @@ import { GiCharacter, GiBootPrints, GiChaingun, GiBowman } from 'react-icons/gi'
 
 import { useState } from 'react'
 import { Card, CardHeader, CardTitle, CardSubtitle, CardContent } from '../components/ui/Card'
-import { NavbarLink } from '../components/Navbar'
 import { Container } from '../components/Container'
 
 const links = [
@@ -44,20 +43,20 @@ export default function CharacterInfoPage() {
 	return (
 		<div className='h-full flex flex-col-reverse md:flex-col'>
 			{/* Submenu: */}
-			<div className='h-16 bg-blue-900 text-white px-3 rounded-t md:rounded-t-none md:rounded-b flex items-center sticky bottom-0 md:top-0 md:bottom-auto  flex-shrink-0'>
+			<div className='h-12 bg-blue-900 text-white px-3 rounded-t md:rounded-t-none md:rounded-b flex items-center sticky bottom-0 md:top-0 md:bottom-auto  flex-shrink-0'>
 				<Container>
 					<ul className="flex gap-1 md:gap-2 justify-around md:justify-normal text-3xl md:text-lg">
 						{
 							links.map((link, index) => {
 								return (<li key={index} className=''>
 									{ /* TODO: Remove onClick, make it handle it using toPage and the info of the page on the context (useContext) */}
-									<NavbarLink
+									<SubNavbarLink
 										onClick={() => onSecondarySectionChange(link.toSection)}
-										className={`flex items-center gap-2 ${section === link.toSection ? 'bg-blue-600' : 'hover:bg-blue-700'}`}
+										className={`flex items-center gap-2 text-base ${section === link.toSection ? 'bg-blue-600' : 'hover:bg-blue-700'}`}
 									>
 										<span>{link.icon}</span>
 										<span className='hidden md:block'>{link.title}</span>
-									</NavbarLink>
+									</SubNavbarLink>
 								</li>)
 							})
 						}
@@ -181,5 +180,28 @@ export default function CharacterInfoPage() {
 				}
 			</Container>
 		</div>
+	)
+}
+
+
+interface NavbarLinkProps {
+	toPage?: string
+	className?: string
+	onClick: () => void
+	children: React.ReactNode
+}
+
+export function SubNavbarLink({ className = '', onClick, toPage, children }: NavbarLinkProps) {
+
+	const handleClick = () => {
+		// TODO: Replace onClick call, use useContext and toPage
+		onClick()
+		console.log(toPage)
+	}
+
+	return (
+		<a onClick={handleClick} className={`px-2 py-1 rounded cursor-pointer ${className}`}>
+			{children}
+		</a>
 	)
 }
