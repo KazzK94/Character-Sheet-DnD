@@ -43,7 +43,7 @@ export default function CharacterInfoPage() {
 	return (
 		<div className='h-full flex flex-col-reverse md:flex-col'>
 			{/* Submenu: */}
-			<div className='h-12 bg-blue-900 text-white px-3 rounded-t md:rounded-t-none md:rounded-b flex items-center sticky bottom-0 md:top-0 md:bottom-auto  flex-shrink-0'>
+			<div className='h-12 bg-blue-800 text-white px-3 rounded-t md:rounded-t-none md:rounded-b flex items-center sticky bottom-0 md:top-0 md:bottom-auto flex-shrink-0'>
 				<Container>
 					<ul className="flex gap-1 md:gap-2 justify-around md:justify-normal text-2xl md:text-base">
 						{
