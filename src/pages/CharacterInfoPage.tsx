@@ -45,14 +45,14 @@ export default function CharacterInfoPage() {
 			{/* Submenu: */}
 			<div className='h-12 bg-blue-900 text-white px-3 rounded-t md:rounded-t-none md:rounded-b flex items-center sticky bottom-0 md:top-0 md:bottom-auto  flex-shrink-0'>
 				<Container>
-					<ul className="flex gap-1 md:gap-2 justify-around md:justify-normal text-3xl md:text-lg">
+					<ul className="flex gap-1 md:gap-2 justify-around md:justify-normal text-2xl md:text-base">
 						{
 							links.map((link, index) => {
 								return (<li key={index} className=''>
 									{ /* TODO: Remove onClick, make it handle it using toPage and the info of the page on the context (useContext) */}
 									<SubNavbarLink
 										onClick={() => onSecondarySectionChange(link.toSection)}
-										className={`flex items-center gap-2 text-base ${section === link.toSection ? 'bg-blue-600' : 'hover:bg-blue-700'}`}
+										className={`flex items-center gap-2 ${section === link.toSection ? 'bg-blue-600' : 'hover:bg-blue-700'}`}
 									>
 										<span>{link.icon}</span>
 										<span className='hidden md:block'>{link.title}</span>
