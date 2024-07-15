@@ -45,7 +45,7 @@ interface NavbarProps {
 
 export function Navbar({ currentPage, onPageChange, className = '' }: NavbarProps) {
 	return (
-		<nav className={`bg-primary text-white border-t md:border-t-0 md:border-b h-16 px-2 flex items-center ${className}`}>
+		<nav className={`bg-primary text-white h-16 px-2 flex items-center ${className}`}>
 			{/* Links: */}
 			<Container>
 				<ul className="flex gap-1 md:gap-2 justify-around md:justify-normal text-3xl md:text-lg">
@@ -68,13 +68,13 @@ export function Navbar({ currentPage, onPageChange, className = '' }: NavbarProp
 
 
 interface NavbarLinkProps {
-	toPage: string
+	toPage?: string
 	className?: string
 	onClick: () => void
 	children: React.ReactNode
 }
 
-function NavbarLink({ className = '', onClick, toPage, children }: NavbarLinkProps) {
+export function NavbarLink({ className = '', onClick, toPage, children }: NavbarLinkProps) {
 
 	const handleClick = () => {
 		// TODO: Replace onClick call, use useContext and toPage
