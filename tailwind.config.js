@@ -16,8 +16,8 @@ export default {
 			keyframes: {
 				secondaryMenuSlideUp: {
 					'0%': {
-						transform: 'translateY(4rem)',
-						opacity: 0.2
+						transform: 'translateY(3rem)',
+						opacity: 0.6
 					},
 					'100%': {
 						transform: 'translateY(0)',
@@ -26,8 +26,8 @@ export default {
 				},
 				secondaryMenuSlideDown: {
 					'0%': {
-						transform: 'translateY(-4rem)',
-						opacity: 0.2
+						transform: 'translateY(-3rem)',
+						opacity: 0.6
 					},
 					'100%': {
 						transform: 'translateY(0)',
